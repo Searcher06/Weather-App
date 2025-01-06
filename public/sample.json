@@ -1,0 +1,44 @@
+{
+    "coord": {
+        "lon": 8.5167,
+        "lat": 12.0001
+    },
+    "weather": [
+        {
+            "id": 801,
+            "main": "Clouds",
+            "description": "few clouds",
+            "icon": "02n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 292.69,
+        "feels_like": 291.33,
+        "temp_min": 292.69,
+        "temp_max": 292.69,
+        "pressure": 1013,
+        "humidity": 24,
+        "sea_level": 1013,
+        "grnd_level": 958
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 3.84,
+        "deg": 68,
+        "gust": 8.51
+    },
+    "clouds": {
+        "all": 24
+    },
+    "dt": 1735610884,
+    "sys": {
+        "country": "NG",
+        "sunrise": 1735623959,
+        "sunset": 1735665110
+    },
+    "timezone": 3600,
+    "id": 2335204,
+    "name": "Kano",
+    "cod": 200
+}
