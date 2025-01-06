@@ -6,7 +6,7 @@ import { Wideview } from "./components/Wideview";
 import forecast from '../public/forcast.json';
 export default function App() {
     let [searchedCity,setSearchedCity] = useState("");
-    let [city,setCity] = useState("mumbai");
+    let [city,setCity] = useState("kano");
     let [Data,setData] = useState([]);
     let [loading,setLoading] = useState(true);
     let [error,setError] = useState(null)
