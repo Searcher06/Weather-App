@@ -5,13 +5,14 @@ export function ForecastBoxes({forecast}){
         <div className="temperature-container">
           {forecast.map((element,index)=>{
             let date = new Date(element.dt_txt);
+            let icon = element.weather[0].icon;
             date = date.toLocaleTimeString()
             return <div key={index} className="tem-boxes">
                 <p id="side">
                     {date}
                 </p>
                 <div>
-                    <img src={steve} alt="" height={38}/>
+                <img src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt="" />
                 </div>
                 <div className="information">
                     <p>{element.main.humidity}%</p>
