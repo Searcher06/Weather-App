@@ -11,7 +11,7 @@ export function ForecastBoxes({forecast}){
                     {date}
                 </p>
                 <div>
-                    <img src={steve} alt="" height={38}/>
+                    <img src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt="" />
                 </div>
                 <div className="information">
                     <p>{element.main.humidity}%</p>
