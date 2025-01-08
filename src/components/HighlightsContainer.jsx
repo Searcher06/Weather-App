@@ -1,6 +1,9 @@
-export function HighlightsContainer({Data}){
+export function HighlightsContainer({Data,loading,error}){
     return <>
-    <div className="contained">
+    {
+        loading ? null : error ? null : 
+        <>
+        <div className="contained">
         <div className="highlights-container">
             <div className="highlights">
                 <p className="io">Wind Speed</p>
@@ -36,6 +39,9 @@ export function HighlightsContainer({Data}){
                 </div>
             </div>
         </div>
-    </div>    
+    </div> 
+        </>
+    }
+       
     </>
 }

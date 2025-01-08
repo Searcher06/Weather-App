@@ -1,9 +1,9 @@
 import steve from "../weatherIcons/photos/steve.svg";
 
-export function ForecastBoxes({forecast}){
+export function ForecastBoxes({forecast,loading,error,forcastL,forecastError}){
     return <>
         <div className="temperature-container">
-          {forecast.map((element,index)=>{
+          {forecast.list.slice(0,6).map((element,index)=>{
             let date = new Date(element.dt_txt);
             let icon = element.weather[0].icon;
             date = date.toLocaleTimeString()

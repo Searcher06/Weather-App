@@ -1,12 +1,16 @@
 import { Forecast } from "./Forecast";
 import { TempHighlights } from "./TempHighlights";
 
-export function Wideview({Data,forecast,forecastL,forecastError}){
+export function Wideview({Data,forecast,forecastL,error,loading}){
     return <>
         <div className="wide-view">
-            <Forecast Data={Data} forecast={forecast} 
-            forcastError={forecastError} forecastL={forecastL}/>
+            {
+                forecastL ? null : error ? null : <>
+                <Forecast Data={Data} forecast={forecast} 
+            forcastError={error} forecastL={forecastL}/>
             <TempHighlights Data={Data} />
+                </>
+            }
         </div>
     </>
 }

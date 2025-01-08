@@ -1,4 +1,5 @@
-export function Searchbar({setSearchedCity,searchedCity,city,setCity}){
+/* eslint-disable react/prop-types */
+export function Searchbar({setSearchedCity,searchedCity,setCity}){
     return <>
     <div className="searchbar">
         <form onSubmit={(e)=>e.preventDefault()}>
@@ -7,7 +8,7 @@ export function Searchbar({setSearchedCity,searchedCity,city,setCity}){
                 setSearchedCity(e.target.value)
             }}/>
             <button
-            onClick={()=>{setCity(searchedCity)}}
+            onClick={()=>{setCity(searchedCity); setSearchedCity("")}}
             ><i className="fas fa-search"></i></button>
         </form>
     </div>

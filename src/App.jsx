@@ -30,6 +30,11 @@ export default function App() {
             setLoading(false);
             console.log(err.message)
         })
+
+        return function(){
+            setData([]);
+            setLoading(true)
+        }
     },[city,base_url])
     
     let [Forecast,setforecast] = useState([]);
@@ -52,15 +57,15 @@ export default function App() {
             console.log("Failed due to " + err)
         })
     },[city,forecast_url])
-
-    if(loading) return <div><h1>Fetching weather....</h1></div>
-    if(error) return <div><h1>{error}</h1></div>
+    if(loading)return <h1>Fetching</h1>
+    if(error)return <h1>{error}</h1>
     return <div className="container">
         <Smallview Data={Data} forecast={forecast} 
         setSearchedCity={setSearchedCity} 
-        searchedCity={searchedCity} city={city} setCity={setCity} />
+        searchedCity={searchedCity} 
+        city={city} setCity={setCity} loading={loading} error={error}/>
         <Wideview Data={Data} forecast={Forecast} 
-        forecastL={forecastL} forecastError={forecastError}/>
+        forecastL={forecastL} forecastError={forecastError} error={error}/>
     </div>
 }
 
